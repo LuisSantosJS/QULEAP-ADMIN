@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { api } from "../../services/api";
 //@ts-ignore
 import { toast } from "react-nextjs-toast";
-import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 
 interface MainProps {}
 
@@ -14,7 +13,7 @@ interface Plans {
 }
 
 export const PlansC: React.FC<MainProps> = () => {
-  const [index0, setIndex0] = useState(true);
+
   const [loading, setLoading] = useState(true);
   const [plans, setPlans] = useState<Plans[]>([]);
   const [isEdit, setIsEdit] = useState(false);
@@ -193,7 +192,7 @@ export const PlansC: React.FC<MainProps> = () => {
             </div>
          
           </div>
-          <span style={{paddingBottom: 20}}>As playlist's dos usuários já criadas não serão alteras com o novo limite adicionado</span>
+          <span style={{paddingBottom: 20}}>As playlist&apos;s dos usuários já criadas não serão alteras com o novo limite adicionado</span>
         </div>
       )}
       {!isEdit && (
